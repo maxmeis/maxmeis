@@ -52,11 +52,10 @@ function recentKind(document) {
 }
 
 function entry(document, label) {
-  const collection = document.collection === 'notes' ? 'note' : 'blog'
   const title = String(document.title).replaceAll('\\', '\\\\').replaceAll('[', '\\[').replaceAll(']', '\\]')
   const url = new URL(document.url)
   if (url.origin !== 'https://max.run') throw new Error(`Unexpected document URL: ${document.url}`)
-  return `- **${label} ${collection}** · [${title}](${url.href})`
+  return `- **${label}** · [${title}](${url.href})`
 }
 
 const collections = ['blog', 'notes']
@@ -66,18 +65,17 @@ const results = await Promise.all(collections.flatMap((collection) => [
 ]))
 
 const cutoff = Date.now() - sevenDays
-const pinned = []
-const recentCandidates = []
+const pinnedByCollection = new Map()
+const recentByCollection = new Map()
 
 for (let index = 0; index < collections.length; index += 1) {
-  pinned.push(...results[index * 2])
-  recentCandidates.push(...results[index * 2 + 1])
+  const collection = collections[index]
+  pinnedByCollection.set(collection, results[index * 2])
+  recentByCollection.set(collection, results[index * 2 + 1]
+    .filter((document) => activityTime(document) >= cutoff)
+    .sort((left, right) => activityTime(right) - activityTime(left))
+    .slice(0, 3))
 }
-
-const recent = recentCandidates
-  .filter((document) => activityTime(document) >= cutoff)
-  .sort((left, right) => activityTime(right) - activityTime(left))
-  .slice(0, 3)
 
 function uniqueEntries(documents, label) {
   const seen = new Set()
@@ -88,16 +86,22 @@ function uniqueEntries(documents, label) {
   })
 }
 
-const pinnedLines = uniqueEntries(pinned, 'Pinned')
-const recentLines = uniqueEntries(recent, recentKind)
+const pinnedPosts = uniqueEntries(pinnedByCollection.get('blog'), 'Pinned')
+const pinnedNotes = uniqueEntries(pinnedByCollection.get('notes'), 'Pinned')
+const recentPosts = uniqueEntries(recentByCollection.get('blog'), recentKind)
+const recentNotes = uniqueEntries(recentByCollection.get('notes'), recentKind)
 
 const section = [
   startMarker,
-  '## From max.run',
+  '## Fresh from max.run 🌱',
   '',
   '_Updated nightly through the max.run MCP server._',
-  ...(pinnedLines.length ? ['', '### Pinned', '', ...pinnedLines] : []),
-  ...(recentLines.length ? ['', '### New or updated in the last 7 days', '', ...recentLines] : []),
+  ...(pinnedPosts.length || pinnedNotes.length ? ['', '### 📌 Pinned'] : []),
+  ...(pinnedPosts.length ? ['', '#### Posts', '', ...pinnedPosts] : []),
+  ...(pinnedNotes.length ? ['', '#### Notes', '', ...pinnedNotes] : []),
+  ...(recentPosts.length || recentNotes.length ? ['', '### 🕒 Last changed in the last 7 days'] : []),
+  ...(recentPosts.length ? ['', '#### Posts', '', ...recentPosts] : []),
+  ...(recentNotes.length ? ['', '#### Notes', '', ...recentNotes] : []),
   endMarker,
 ].join('\n')
 

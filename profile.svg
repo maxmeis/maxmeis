@@ -1,29 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title description">
-  <title id="title">max. — Forward Deployed Engineer</title>
+  <title id="title">max. — work, writing, and notes at max.run</title>
   <desc id="description">My work, writing, and notes now live at max.run.</desc>
 
   <rect width="1200" height="520" fill="#0a0a0a"/>
 
-  <g font-family="DM Mono, ui-monospace, SFMono-Regular, Consolas, Liberation Mono, monospace">
-    <rect x="54" y="48" width="124" height="62" fill="#ff5a1f"/>
-    <text x="66" y="92" fill="#0a0a0a" font-size="42" font-weight="700" letter-spacing="-4">max.</text>
+  <g font-family="DM Mono, ui-monospace, SFMono-Regular, Consolas, Liberation Mono, monospace" text-anchor="middle">
+    <text x="600" y="72" fill="#b8b8b8" font-size="17">hey, i’m</text>
 
-    <text x="1146" y="76" fill="#858585" font-size="14" text-anchor="end">github / 01</text>
-    <text x="1146" y="99" fill="#b8b8b8" font-size="14" text-anchor="end">elsewhere now.</text>
+    <rect x="448" y="100" width="304" height="138" fill="#ff5a1f"/>
+    <text x="600" y="198" fill="#0a0a0a" font-size="86" font-weight="700" letter-spacing="-8">max.</text>
 
-    <text x="54" y="187" fill="#dedede" font-size="54" font-weight="600" letter-spacing="-3">Forward</text>
-    <text x="126" y="247" fill="#dedede" font-size="54" font-weight="600" letter-spacing="-3">Deployed</text>
-    <text x="198" y="307" fill="#dedede" font-size="54" font-weight="600" letter-spacing="-3">Engineer</text>
+    <text x="600" y="292" fill="#dedede" font-size="25" font-weight="500">my work has a new home.</text>
+    <text x="600" y="333" fill="#858585" font-size="16">building things · writing things down</text>
 
-    <line x1="690" y1="164" x2="690" y2="303" stroke="#5c5c5c"/>
-    <text x="722" y="193" fill="#b8b8b8" font-size="17">Building fullstack systems</text>
-    <text x="722" y="220" fill="#b8b8b8" font-size="17">&amp; untangling real-world complexity.</text>
-    <text x="722" y="266" fill="#858585" font-size="14">Work, writing, and notes</text>
-    <text x="722" y="289" fill="#858585" font-size="14">have a new home.</text>
+    <g font-family="Apple Color Emoji, Segoe UI Emoji, sans-serif" font-size="21">
+      <text x="438" y="382">🛠️</text>
+      <text x="600" y="382">✍️</text>
+      <text x="762" y="382">🗒️</text>
+    </g>
+    <g fill="#b8b8b8" font-size="14">
+      <text x="480" y="380">work</text>
+      <text x="647" y="380">writing</text>
+      <text x="804" y="380">notes</text>
+    </g>
 
-    <line x1="54" y1="366" x2="1146" y2="366" stroke="#5c5c5c" stroke-dasharray="2 7"/>
-    <rect x="54" y="404" width="1092" height="70" fill="#ff5a1f"/>
-    <text x="80" y="447" fill="#0a0a0a" font-size="22" font-weight="700">Visit max.run</text>
-    <text x="1120" y="447" fill="#0a0a0a" font-size="26" font-weight="700" text-anchor="end">→</text>
+    <line x1="214" y1="421" x2="986" y2="421" stroke="#5c5c5c" stroke-dasharray="2 7"/>
+    <text x="600" y="469" fill="#ff5a1f" font-size="30" font-weight="700">max.run ↗</text>
   </g>
 </svg>
