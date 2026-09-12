@@ -1,9 +1,11 @@
 <a href="https://max.run" aria-label="Visit max.run">
-  <img src="./profile-centered.svg" width="100%" alt="Hi, I’m max. My work, writing, and notes now live at max.run." />
+  <img src="./profile-mark.svg" width="100%" alt="The max. mark. Visit max.run." />
 </a>
 
 <p align="center">
-  My work, writing, and notes have moved to <a href="https://max.run"><strong>max.run</strong></a>.
+  🛠️ Building things &nbsp;·&nbsp; ✍️ Writing things down &nbsp;·&nbsp; 🗒️ Notes
+  <br />
+  Everything lives at <a href="https://max.run"><strong>max.run</strong></a>.
 </p>
 
 <!-- max-run-content:start -->

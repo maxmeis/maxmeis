@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title description">
+  <title id="title">max.</title>
+  <desc id="description">The max. mark on a technical signal field.</desc>
+
+  <rect width="1200" height="360" fill="#0a0a0a"/>
+
+  <g fill="none" stroke="#5c5c5c" stroke-width="1">
+    <path d="M54 78H248L340 170H420"/>
+    <path d="M780 190H874L956 272H1146"/>
+    <path d="M54 282H238L318 202H420" stroke-dasharray="2 7"/>
+    <path d="M780 158H914L994 78H1146" stroke-dasharray="2 7"/>
+  </g>
+
+  <g fill="#0a0a0a" stroke="#858585">
+    <rect x="242" y="72" width="12" height="12"/>
+    <rect x="950" y="266" width="12" height="12"/>
+    <rect x="312" y="196" width="12" height="12"/>
+    <rect x="988" y="72" width="12" height="12"/>
+  </g>
+
+  <g fill="#ff5a1f">
+    <rect x="50" y="74" width="8" height="8"/>
+    <rect x="1142" y="268" width="8" height="8"/>
+    <rect x="1056" y="74" width="5" height="5"/>
+    <rect x="138" y="278" width="5" height="5"/>
+  </g>
+
+  <rect x="420" y="86" width="360" height="188" fill="#ff5a1f"/>
+  <text x="600" y="218" fill="#0a0a0a" font-family="DM Mono, ui-monospace, SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="112" font-weight="700" letter-spacing="-11" text-anchor="middle">max.</text>
+
+  <g fill="#dedede">
+    <rect x="408" y="74" width="4" height="24"/>
+    <rect x="408" y="74" width="24" height="4"/>
+    <rect x="788" y="262" width="4" height="24"/>
+    <rect x="768" y="282" width="24" height="4"/>
+  </g>
+</svg>
