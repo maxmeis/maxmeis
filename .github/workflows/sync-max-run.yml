@@ -1,0 +1,40 @@
+name: Sync max.run writing
+
+on:
+  schedule:
+    - cron: "17 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-max-run-writing
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch pinned and recent writing through MCP
+        run: node .github/scripts/sync-max-run.mjs
+
+      - name: Commit profile changes
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "README is already current."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update writing from max.run"
+          git push
