@@ -48,14 +48,14 @@ function activityTime(document) {
 function recentKind(document) {
   const created = Date.parse(document.createdAt ?? 0)
   const updated = Date.parse(document.updatedAt ?? 0)
-  return updated > created ? 'Updated' : 'New'
+  return updated > created ? 'updated' : 'new'
 }
 
 function entry(document, label) {
   const title = String(document.title).replaceAll('\\', '\\\\').replaceAll('[', '\\[').replaceAll(']', '\\]')
   const url = new URL(document.url)
   if (url.origin !== 'https://max.run') throw new Error(`Unexpected document URL: ${document.url}`)
-  return `- **${label}** · [${title}](${url.href})`
+  return `- [${title}](${url.href})${label ? ` _${label}_` : ''}`
 }
 
 const collections = ['blog', 'notes']
@@ -86,22 +86,20 @@ function uniqueEntries(documents, label) {
   })
 }
 
-const pinnedPosts = uniqueEntries(pinnedByCollection.get('blog'), 'Pinned')
-const pinnedNotes = uniqueEntries(pinnedByCollection.get('notes'), 'Pinned')
+const pinnedPosts = uniqueEntries(pinnedByCollection.get('blog'), '')
+const pinnedNotes = uniqueEntries(pinnedByCollection.get('notes'), '')
 const recentPosts = uniqueEntries(recentByCollection.get('blog'), recentKind)
 const recentNotes = uniqueEntries(recentByCollection.get('notes'), recentKind)
 
 const section = [
   startMarker,
-  '## Fresh from max.run 🌱',
-  '',
-  '_Updated nightly through the max.run MCP server._',
-  ...(pinnedPosts.length || pinnedNotes.length ? ['', '### 📌 Pinned'] : []),
-  ...(pinnedPosts.length ? ['', '#### Posts', '', ...pinnedPosts] : []),
-  ...(pinnedNotes.length ? ['', '#### Notes', '', ...pinnedNotes] : []),
-  ...(recentPosts.length || recentNotes.length ? ['', '### 🕒 Last changed in the last 7 days'] : []),
-  ...(recentPosts.length ? ['', '#### Posts', '', ...recentPosts] : []),
-  ...(recentNotes.length ? ['', '#### Notes', '', ...recentNotes] : []),
+  '## writing',
+  ...(pinnedPosts.length || pinnedNotes.length ? ['', '### pinned'] : []),
+  ...(pinnedPosts.length ? ['', '#### blog', '', ...pinnedPosts] : []),
+  ...(pinnedNotes.length ? ['', '#### notes', '', ...pinnedNotes] : []),
+  ...(recentPosts.length || recentNotes.length ? ['', '### changed in the last 7 days'] : []),
+  ...(recentPosts.length ? ['', '#### blog', '', ...recentPosts] : []),
+  ...(recentNotes.length ? ['', '#### notes', '', ...recentNotes] : []),
   endMarker,
 ].join('\n')
 
