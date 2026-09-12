@@ -1,5 +1,5 @@
 <a href="https://max.run" aria-label="Visit max.run">
-  <img src="./profile.svg" width="100%" alt="Hi, I’m max. My work, writing, and notes now live at max.run." />
+  <img src="./profile-centered.svg" width="100%" alt="Hi, I’m max. My work, writing, and notes now live at max.run." />
 </a>
 
 <p align="center">
