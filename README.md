@@ -3,13 +3,7 @@
 </a>
 
 <p align="center">
-  Based in Germany.
-</p>
-
-<p align="center">
-  <a href="https://max.run/about">about</a> ·
-  <a href="https://max.run/blog">blog</a> ·
-  <a href="https://max.run/notes">notes</a>
+  Based in Germany. <a href="https://max.run/">read more</a>
 </p>
 
 <!-- max-run-content:start -->
