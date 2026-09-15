@@ -13,9 +13,8 @@
 </p>
 
 <!-- max-run-content:start -->
-## writing
 
-### pinned
+### Spotlight
 
 #### blog
 
@@ -27,7 +26,7 @@
 - [Inline Python dependencies with PEP 723](https://max.run/notes/inline-python-dependencies)
 - [Awesome tools](https://max.run/notes/hidden-tools)
 
-### changed in the last 7 days
+### Changed recently
 
 #### blog
 

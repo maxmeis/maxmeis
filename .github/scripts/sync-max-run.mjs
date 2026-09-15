@@ -93,11 +93,10 @@ const recentNotes = uniqueEntries(recentByCollection.get('notes'), recentKind)
 
 const section = [
   startMarker,
-  '## writing',
-  ...(pinnedPosts.length || pinnedNotes.length ? ['', '### pinned'] : []),
+  ...(pinnedPosts.length || pinnedNotes.length ? ['', '### Spotlight'] : []),
   ...(pinnedPosts.length ? ['', '#### blog', '', ...pinnedPosts] : []),
   ...(pinnedNotes.length ? ['', '#### notes', '', ...pinnedNotes] : []),
-  ...(recentPosts.length || recentNotes.length ? ['', '### changed in the last 7 days'] : []),
+  ...(recentPosts.length || recentNotes.length ? ['', '### Changed recently'] : []),
   ...(recentPosts.length ? ['', '#### blog', '', ...recentPosts] : []),
   ...(recentNotes.length ? ['', '#### notes', '', ...recentNotes] : []),
   endMarker,
