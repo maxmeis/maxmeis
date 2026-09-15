@@ -41,5 +41,4 @@
 
 - [Awesome tools](https://max.run/notes/hidden-tools) _updated_
 - [Use DNS to publish a version pointer for a private repo](https://max.run/notes/dns-version-pointer-private-repo) _new_
-- [Inline Python dependencies with PEP 723](https://max.run/notes/inline-python-dependencies) _new_
 <!-- max-run-content:end -->
