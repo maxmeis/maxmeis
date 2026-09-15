@@ -3,8 +3,6 @@
 </a>
 
 <p align="center">
-  Building fullstack systems &amp; untangling real-world complexity.
-  <br />
   Based in Germany.
 </p>
 
