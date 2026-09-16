@@ -25,8 +25,6 @@
 #### blog
 
 - [A field guide to this blog](https://max.run/blog/hello-world) _updated_
-- [How I manage my dotfiles](https://max.run/blog/how-i-manage-my-dotfiles) _new_
-- [Ambient request context in Node.js](https://max.run/blog/ambient-request-context) _updated_
 
 #### notes
 
