@@ -22,12 +22,7 @@
 
 ### Changed recently
 
-#### blog
-
-- [A field guide to this blog](https://max.run/blog/hello-world) _updated_
-
 #### notes
 
-- [Awesome tools](https://max.run/notes/hidden-tools) _updated_
-- [Use DNS to publish a version pointer for a private repo](https://max.run/notes/dns-version-pointer-private-repo) _new_
+- [A private tap kept breaking my `brew upgrade`](https://max.run/notes/private-homebrew-upgrades) _new_
 <!-- max-run-content:end -->
