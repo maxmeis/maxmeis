@@ -19,10 +19,4 @@
 
 - [Inline Python dependencies with PEP 723](https://max.run/notes/inline-python-dependencies)
 - [Awesome tools](https://max.run/notes/hidden-tools)
-
-### Changed recently
-
-#### notes
-
-- [A private tap kept breaking my `brew upgrade`](https://max.run/notes/private-homebrew-upgrades) _new_
 <!-- max-run-content:end -->
