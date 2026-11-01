@@ -18,5 +18,11 @@
 #### notes
 
 - [Inline Python dependencies with PEP 723](https://max.run/notes/inline-python-dependencies)
-- [Awesome tools](https://max.run/notes/hidden-tools)
+- [Small web and macOS tools worth keeping](https://max.run/notes/hidden-tools)
+
+### Changed recently
+
+#### notes
+
+- [Connecting my SenseCAP to Wi-Fi was a nightmare](https://max.run/notes/sensecap-wifi-transmit-power) _new_
 <!-- max-run-content:end -->
