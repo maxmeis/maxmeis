@@ -24,5 +24,6 @@
 
 #### notes
 
+- [Publish Claude Artifacts from a coding agent](https://max.run/notes/claude-artifacts-from-coding-agents) _new_
 - [Connecting my SenseCAP to Wi-Fi was a nightmare](https://max.run/notes/sensecap-wifi-transmit-power) _new_
 <!-- max-run-content:end -->
