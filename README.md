@@ -19,10 +19,4 @@
 
 - [Inline Python dependencies with PEP 723](https://max.run/notes/inline-python-dependencies)
 - [Small web and macOS tools worth keeping](https://max.run/notes/hidden-tools)
-
-### Changed recently
-
-#### notes
-
-- [Publish Claude Artifacts from a coding agent](https://max.run/notes/claude-artifacts-from-coding-agents) _new_
 <!-- max-run-content:end -->
